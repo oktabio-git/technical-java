@@ -5,30 +5,26 @@ public class Patient {
 	private String name;
 	private int age;
 	private boolean sex;
-
-	private float temperature;
-	private float systolic;
-	private float diastolic;
-	private int heartRate;
-
 	private String result;
+	private VitalSigns vsigns;
 
 	// TODO: Check if this data can be used after because it still missing some
 	// information.
+//	private float temperature;
+//	private float systolic;
+//	private float diastolic;
+//	private int heartRate;
 
 	public Patient() {
 	}
 
-	public Patient(int id, String name, int age, boolean sex, float temperature, float systolic, float diastolic,
-			int heartRate) {
+	public Patient(int id, String name, int age, boolean sex, VitalSigns vsigns) {
+		super();
 		this.id = id;
 		this.name = name;
 		this.age = age;
 		this.sex = sex;
-		this.temperature = temperature;
-		this.systolic = systolic;
-		this.diastolic = diastolic;
-		this.heartRate = heartRate;
+		this.vsigns = vsigns;
 	}
 
 	public int getId() {
@@ -63,44 +59,20 @@ public class Patient {
 		this.sex = sex;
 	}
 
-	public float getTemperature() {
-		return temperature;
-	}
-
-	public void setTemperature(float temperature) {
-		this.temperature = temperature;
-	}
-
-	public float getSystolic() {
-		return systolic;
-	}
-
-	public void setSystolic(float systolic) {
-		this.systolic = systolic;
-	}
-
-	public float getDiastolic() {
-		return diastolic;
-	}
-
-	public void setDiastolic(float diastolic) {
-		this.diastolic = diastolic;
-	}
-
-	public int getHeartRate() {
-		return heartRate;
-	}
-
-	public void setHeartRate(int heartRate) {
-		this.heartRate = heartRate;
-	}
-
 	public String getResult() {
 		return result;
 	}
 
 	public void setResult(String result) {
 		this.result = result;
+	}
+
+	public VitalSigns getVsigns() {
+		return vsigns;
+	}
+
+	public void setVsigns(VitalSigns vsigns) {
+		this.vsigns = vsigns;
 	}
 
 }

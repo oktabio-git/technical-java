@@ -16,9 +16,9 @@ public class Controller {
 
 	private void execute() {
 		patient = view.generate();
-		String tResult = inter.getTemperatureResult(patient.getTemperature());
-		String bpResult = inter.getBloodPressureCategory(patient.getSystolic(), patient.getDiastolic());
-		String hrResult = inter.heartRateAssessment(patient.getAge(), patient.isSex(), patient.getHeartRate());
+		String tResult = inter.getTemperatureResult(patient.getVsigns().getTemperature());
+		String bpResult = inter.getBloodPressureCategory(patient.getVsigns().getSystolic(), patient.getVsigns().getDiastolic());
+		String hrResult = inter.heartRateAssessment(patient.getAge(), patient.isSex(), patient.getVsigns().getHeartRate());
 		patient.setResult("The results about your vital signs; in temperature: " + tResult + ", in blood pressure: " + bpResult + " and heart rate: " + hrResult);
 		view.showResult(patient);
 		patientList.add(patient);
